@@ -19,7 +19,7 @@ const Header = () => {
                         <Link to='/faq'>FAQ</Link>
                         <Link to='/blog'>Blog</Link>
                         <Link to='/login'>Login</Link>
-                        <Link to='/logout'>LogOut</Link>
+                        <Link to='/register'>Register</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

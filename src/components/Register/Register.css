@@ -1,0 +1,25 @@
+.form-container {
+    width: 550px;
+    height: 600px;
+    border: 2px solid #2467EC;
+    margin: 80px auto;
+}
+
+.form-title {
+    color: #2467EC;
+}
+
+.google {
+    color: green;
+    border: 2px solid green;
+}
+
+.facebook {
+    color: rgb(92, 92, 215);
+    border: 2px solid rgb(98, 98, 212);
+}
+
+.twitter {
+    color: rgb(106, 204, 204);
+    border: 2px solid rgb(88, 183, 183);
+}
