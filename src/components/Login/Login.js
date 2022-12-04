@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 
@@ -12,7 +12,9 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 const Login = () => {
     const { signInEmail, createWithGithub, createWithGmail } = useContext(AuthContext)
     const [error, setError] = useState(null)
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
 
     const handleSubmit = event => {
         event.preventDefault()
@@ -25,7 +27,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
-                navigate('/')
+                navigate(from, { replace: true })
             })
             .catch(error => setError('You enter a wrong password'))
 
@@ -37,7 +39,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                navigate('/')
+                navigate(from, { replace: true })
             })
             .catch(error => console.error(error))
     }
@@ -48,7 +50,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
-                navigate('/')
+                navigate(from, { replace: true })
             })
             .catch(error => console.error(error))
     }

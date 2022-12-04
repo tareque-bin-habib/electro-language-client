@@ -37,6 +37,7 @@ const Register = () => {
                 const user = result.user;
                 console.log(user)
                 form.reset();
+                navigate('/')
             })
             .catch(error => console.error(error))
     }

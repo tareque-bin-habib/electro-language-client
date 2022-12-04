@@ -13,6 +13,7 @@ import { FaUser } from "react-icons/fa";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
+    console.log('Header', user)
 
     return (
         <Navbar bg="light" expand="lg" className='p-3'>

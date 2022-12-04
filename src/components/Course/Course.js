@@ -18,7 +18,7 @@ const Course = ({ product }) => {
                             :
                             <p>{details}</p>
                     }
-                    <span>Price: ${price}</span>
+                    <span className='text-primary fw-bold'>Price: ${price}</span>
                 </Card.Text>
                 <Link to={`/courseDetails/${id}`}><Button variant="primary">Course Details</Button></Link>
             </Card.Body>

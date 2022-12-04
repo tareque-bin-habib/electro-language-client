@@ -1,6 +1,6 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import Single from '../Single/Single';
+import { Link, useLoaderData } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 
 const CourseDetails = () => {
@@ -13,6 +13,7 @@ const CourseDetails = () => {
             <img className='w-25' src={details.img} alt="" />
             <p className='mt-4'>{details.details}</p>
             <p className='text-primary fw-bold'>Price : ${details.price}</p>
+            <Link to={`/checkout/${details.id}`}><Button variant="primary">Premium Access</Button></Link>
         </div>
     );
 };
