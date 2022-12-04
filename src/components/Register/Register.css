@@ -1,8 +1,9 @@
 .form-container {
     width: 550px;
-    height: 600px;
+    height: 650px;
     border: 2px solid #2467EC;
     margin: 80px auto;
+    background-color: #F8F9FA;
 }
 
 .form-title {
