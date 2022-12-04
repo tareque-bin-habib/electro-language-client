@@ -14,4 +14,45 @@
 .left-side-container {
     background-color: #F8F9FA;
     margin-top: 20px;
+    padding: 100px;
 }
+
+.left-side-container li {
+    list-style: none;
+}
+
+.left-side-container a {
+    font-weight: bold;
+    font-size: 23px;
+}
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1550px) {
+    .products-container {
+        gap: 100px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+    .products-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .course-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* @media only screen and (max-width: 670px) {
+    .products-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */

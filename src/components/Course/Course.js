@@ -8,7 +8,7 @@ const Course = ({ product }) => {
     const { id, img, name, details, price } = product;
     return (
         <Card>
-            <Card.Img variant="top" src={img} />
+            <Card.Img className='image-size' variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>

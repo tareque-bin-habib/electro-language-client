@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Course from '../Course/Course';
 import './Courses.css'
 
@@ -8,8 +8,11 @@ const Courses = () => {
     // console.log(products)
     return (
         <div className='course-container'>
-            <div className='left-side-container'>
-                <h1>left</h1>
+            <div className='left-side-container text-center'>
+                <ul>
+                    <li><Link to='/blog'>Blog</Link></li>
+                    <li><Link to='/faq'>FAQ</Link></li>
+                </ul>
             </div>
             <div className='products-container'>
                 {
