@@ -5,7 +5,7 @@ import './Courses.css'
 
 const Courses = () => {
     const products = useLoaderData();
-    console.log(products)
+    // console.log(products)
     return (
         <div className='course-container'>
             <div className='left-side-container'>

@@ -10,3 +10,8 @@
     row-gap: 80px;
     padding: 50px;
 }
+
+.left-side-container {
+    background-color: #F8F9FA;
+    margin-top: 20px;
+}
