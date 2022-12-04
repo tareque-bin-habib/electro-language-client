@@ -5,6 +5,9 @@ import Card from 'react-bootstrap/Card';
 
 const CheckOut = () => {
     const checkout = useLoaderData()
+    const handlePurchase = () => {
+        alert('Thank you for Purchase')
+    }
     return (
         <div>
             <Card>
@@ -15,7 +18,7 @@ const CheckOut = () => {
                         {checkout.details}
                         <p className='text-primary fw-bold'>Price: ${checkout.price}</p>
                     </Card.Text>
-                    <Button variant="primary">Purchase</Button>
+                    <Button onClick={handlePurchase} variant="primary">Purchase</Button>
                 </Card.Body>
             </Card>
         </div>
