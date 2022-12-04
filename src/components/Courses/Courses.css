@@ -1,0 +1,12 @@
+.course-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 230px;
+    row-gap: 80px;
+    padding: 50px;
+}
