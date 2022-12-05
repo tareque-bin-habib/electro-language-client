@@ -8,7 +8,7 @@ import { AuthContext } from '../../contexts/UserContext';
 import Button from 'react-bootstrap/Button';
 import './Header.css'
 import { Image } from 'react-bootstrap';
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaGoogle, FaTwitter } from "react-icons/fa";
 
 
 const Header = () => {
@@ -42,6 +42,7 @@ const Header = () => {
                                 :
                                 <FaUser></FaUser>
                         }
+
 
                     </Nav>
                 </Navbar.Collapse>
