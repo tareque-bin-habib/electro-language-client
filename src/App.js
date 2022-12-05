@@ -12,6 +12,7 @@ import Register from './components/Register/Register';
 import CourseDetails from './components/CourseDetails/CourseDetails';
 import CheckOut from './components/CheckOut/CheckOut';
 import PrivateRoutes from './routes/PrivateRoutes';
+import Error from './components/Error/Error';
 
 function App() {
   const router = createBrowserRouter([
@@ -25,17 +26,17 @@ function App() {
         },
         {
           path: '/courses',
-          loader: () => fetch('http://localhost:5000/products'),
+          loader: () => fetch('https://electro-language-server.vercel.app/products'),
           element: <Courses></Courses>
         },
         {
           path: '/courseDetails/:id',
-          loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
+          loader: ({ params }) => fetch(`https://electro-language-server.vercel.app/products/${params.id}`),
           element: <CourseDetails></CourseDetails>
         },
         {
           path: '/checkout/:id',
-          loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
+          loader: ({ params }) => fetch(`https://electro-language-server.vercel.app/products/${params.id}`),
           element: <PrivateRoutes><CheckOut></CheckOut></PrivateRoutes>
         },
         {
@@ -53,8 +54,13 @@ function App() {
         {
           path: '/register',
           element: <Register></Register>
+        },
+        {
+          path: '*',
+          element: <Error></Error>
         }
-      ]
+      ],
+
     },
 
   ])
